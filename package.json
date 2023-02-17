@@ -25,7 +25,7 @@
     "start": "cd fixture && react-native start",
     "test": "jest",
     "run-ios": "cd fixture && yarn react-native run-ios && yarn build --watch",
-    "run-android": "cd fixture && yarn react-native run-android && yarn build --watch",
+    "run-android": "cd fixture && yarn react-native run-android && yarn build --watch"
   },
   "peerDependencies": {
     "@babel/runtime": "*",
