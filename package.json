@@ -20,7 +20,7 @@
   "description": "FlashList is a more performant FlatList replacement",
   "author": "shopify",
   "license": "MIT",
-  "main": "scr/index.ts",
+  "main": "src/index.ts",
   "scripts": {
     "start": "cd fixture && react-native start",
     "test": "jest",
