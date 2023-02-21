@@ -333,6 +333,4 @@ export interface FlashListProps<TItem> extends ScrollViewProps {
   disableAutoLayout?: boolean;
 
   animatedContentContainerStyle?: ViewStyle|ViewStyle[];
-
-  animatedItemWrapperStyle?: ViewStyle|ViewStyle[];
 }

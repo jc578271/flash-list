@@ -462,7 +462,6 @@ class FlashList<T> extends React.PureComponent<
             inverted={this.props.inverted}
             renderer={this.header}
           />
-          <Animated.View style={this.props.animatedItemWrapperStyle}>
             <AutoLayoutView
               {...props}
               onBlankAreaEvent={this.props.onBlankArea}
@@ -471,7 +470,6 @@ class FlashList<T> extends React.PureComponent<
             >
               {children}
             </AutoLayoutView>
-          </Animated.View>
         </Animated.View>
         {this.isEmptyList
           ? this.getValidComponent(this.props.ListEmptyComponent)
