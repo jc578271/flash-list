@@ -42,6 +42,7 @@ import {
   hasUnsupportedKeysInContentContainerStyle,
   updateContentStyle,
 } from "./utils/ContentContainerUtils";
+import Animated from "react-native-reanimated";
 
 interface StickyProps extends StickyContainerProps {
   children: any;
@@ -450,24 +451,26 @@ class FlashList<T> extends React.PureComponent<
     this.clearPostLoadTimeout();
     return (
       <>
-        <PureComponentWrapper
-          enabled={this.isListLoaded || children.length > 0 || this.isEmptyList}
-          contentStyle={this.props.contentContainerStyle}
-          horizontal={this.props.horizontal}
-          header={this.props.ListHeaderComponent}
-          extraData={this.state.extraData}
-          headerStyle={this.props.ListHeaderComponentStyle}
-          inverted={this.props.inverted}
-          renderer={this.header}
-        />
-        <AutoLayoutView
-          {...props}
-          onBlankAreaEvent={this.props.onBlankArea}
-          onLayout={this.updateDistanceFromWindow}
-          disableAutoLayout={this.props.disableAutoLayout}
-        >
-          {children}
-        </AutoLayoutView>
+        <Animated.View style={this.props.animatedContentContainerStyle}>
+          <PureComponentWrapper
+            enabled={this.isListLoaded || children.length > 0 || this.isEmptyList}
+            contentStyle={this.props.contentContainerStyle}
+            horizontal={this.props.horizontal}
+            header={this.props.ListHeaderComponent}
+            extraData={this.state.extraData}
+            headerStyle={this.props.ListHeaderComponentStyle}
+            inverted={this.props.inverted}
+            renderer={this.header}
+          />
+            <AutoLayoutView
+              {...props}
+              onBlankAreaEvent={this.props.onBlankArea}
+              onLayout={this.updateDistanceFromWindow}
+              disableAutoLayout={this.props.disableAutoLayout}
+            >
+              {children}
+            </AutoLayoutView>
+        </Animated.View>
         {this.isEmptyList
           ? this.getValidComponent(this.props.ListEmptyComponent)
           : null}

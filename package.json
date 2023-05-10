@@ -49,7 +49,8 @@
     "run-web": "cd fixture/web-app && yarn web",
     "rw": "yarn run-web",
     "predeploy:website": "sh ./build_website.sh",
-    "deploy:website": "gh-pages -d website/_site"
+    "deploy:website": "gh-pages -d website/_site",
+    "prepare": "yarn build"
   },
   "peerDependencies": {
     "@babel/runtime": "*",
@@ -73,6 +74,7 @@
     "prettier": "^2.7.1",
     "react": "17.0.2",
     "react-native": "0.68.5",
+    "react-native-reanimated": "3.0.0-rc.10",
     "typescript": "^4.7.4"
   },
   "files": [
