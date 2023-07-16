@@ -49,7 +49,7 @@
     "rw": "yarn run-web",
     "predeploy:website": "sh ./build_website.sh",
     "deploy:website": "gh-pages -d website/_site",
-//    "prepare": "yarn build"
+    "okok": "yarn build"
   },
   "peerDependencies": {
     "@babel/runtime": "*",
