@@ -1,6 +1,6 @@
 {
   "name": "@shopify/flash-list",
-  "version": "1.5.0",
+  "version": "1.6.1",
   "keywords": [
     "react-native",
     "recyclerview",
@@ -36,6 +36,7 @@
     "test": "jest",
     "lint": "yarn eslint . --ext .ts,.tsx",
     "lint:fix": "yarn eslint . --ext .ts,.tsx --fix",
+    "type-check": "yarn tsc --pretty --noEmit",
     "build": "tsc -b",
     "e2e:build:android": "detox build -c android.emu.release",
     "run-ios": "cd fixture && yarn react-native run-ios && yarn build --watch",
